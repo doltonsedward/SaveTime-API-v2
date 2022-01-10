@@ -2,6 +2,7 @@
   "name": "savetime-v2-api",
   "version": "1.0.0",
   "description": "SaveTime v2 API",
+  "type": "module",
   "scripts": {
     "start": "node index",
     "dev": "nodemon index"
