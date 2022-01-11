@@ -6,3 +6,7 @@ mongoose.connect(MONGOOSE_CONNECTION, {
   useUnifiedTopology: true,
   useFindAndModify: false,
 });
+
+const db = mongoose.connection;
+
+export default db;
