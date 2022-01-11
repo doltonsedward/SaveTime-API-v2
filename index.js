@@ -1,9 +1,7 @@
 import express from "express";
+import { PORT } from "./src/config/common";
 
 const app = express();
 app.use(express.json());
 
-const PORT = 7500;
-app.listen(PORT || process.env.PORT, () =>
-  console.log(`Server running on ${PORT}`)
-);
+app.listen(PORT, () => console.log(`Server running on ${PORT}`));
