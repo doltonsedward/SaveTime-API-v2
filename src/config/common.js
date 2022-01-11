@@ -3,3 +3,4 @@ dotenv.config();
 
 export const MONGOOSE_DB = process.env.MONGOOSE_DB;
 export const PORT = process.env.PORT;
+export const MONGOOSE_CONNECTION = process.env.MONGOOSE_CONNECTION;
