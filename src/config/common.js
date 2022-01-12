@@ -1,6 +1,7 @@
 import dotenv from "dotenv";
 dotenv.config();
 
-export const MONGOOSE_DB = process.env.MONGOOSE_DB;
-export const PORT = process.env.PORT;
-export const MONGOOSE_CONNECTION = process.env.MONGOOSE_CONNECTION;
+const PORT = process.env.PORT;
+const MONGOOSE_CONNECTION = process.env.MONGOOSE_CONNECTION;
+
+export { PORT, MONGOOSE_CONNECTION };
