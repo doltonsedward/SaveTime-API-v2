@@ -4,8 +4,8 @@
   "description": "SaveTime v2 API",
   "type": "module",
   "scripts": {
-    "start": "node index",
-    "dev": "nodemon index"
+    "start": "node --experimental-modules --es-module-specifier-resolution=node index",
+    "dev": "nodemon --experimental-modules --es-module-specifier-resolution=node index"
   },
   "main": "index.js",
   "author": "Doltons",
