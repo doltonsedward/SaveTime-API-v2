@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "start": "node --experimental-modules --es-module-specifier-resolution=node index",
-    "dev": "nodemon --experimental-modules --es-module-specifier-resolution=node index"
+    "dev": "nodemon --experimental-modules --es-module-specifier-resolution=node index",
+    "lint": "eslint . -c ./.eslintrc.js"
   },
   "main": "index.js",
   "author": "Doltons",
@@ -17,5 +18,8 @@
     "jest": "^27.4.7",
     "mongoose": "^6.1.5",
     "supertest": "^6.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.6.0"
   }
 }
