@@ -1,3 +1,4 @@
 import app from "./app";
+import { PORT } from "./src/config/common";
 
-app.listen(7500, () => console.log(`Server running on `));
+app.listen(PORT, () => console.log(`Server running on ${PORT}`));
