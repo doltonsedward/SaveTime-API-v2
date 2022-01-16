@@ -1,16 +1,13 @@
-import supertest from "supertest";
-import app from "../app";
+import db from "../src/config/db";
+import mongoose from "mongoose";
 
-const request = supertest;
-describe("GET /api/v1", () => {
-  it("should return status code === 200", async () => {
-    const res = await request(app).get("/api/v1/");
+describe("Check mongoose connection status", () => {
+  it("should return 2 || connecting", () => {
+    db.connection.on("error", (err) => {
+      console.log(err);
+    });
 
-    expect(res.statusCode).toBe(200);
-  });
-  it("should return response status success", async () => {
-    const res = await request(app).get("/api/v1/");
-
-    expect(res.statusCode).toBe(200);
+    expect(mongoose.connection.readyState).toBeTruthy();
+    expect(mongoose.connection.readyState).toBe(2);
   });
 });
